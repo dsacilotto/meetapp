@@ -1,18 +1,41 @@
 <h1 align="center">
-    DESAFIO FINAL - MEETAPP
+    FINAL CHALLENGE - MEETAPP
 </h1>
 
-Resolução do desafio [RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp) para obtenção do certificado.
+<h3 align="center">
+  Meetapp is a developer event aggregator app
+</h3>
 
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/dsacilotto/meetapp?color=%2304b4d3">
+</p>
+
+[RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp) challenge resolution.
+
+## Application screen
+
+### Frontend
+
+<p align="center">
+  <img alt="Frontend Login" src=".github/f_login.png" width="200">
+  <img alt="Frontend Home" src=".github/f_home.png" width="200">
+  <img alt="Frontend New Meetup" src=".github/f_new_meetup.png" width="200">
+  <img alt="Frontend View Meetup" src=".github/f_view_meetup.png" width="200">
+</p>
+
+### Mobile
+
+<p align="center">
+  <img alt="Mobile Login" src=".github/m_login.png" width="100">
+  <img alt="Mobile Home" src=".github/m_home.png" width="100">
+  <img alt="Mobile Subscribed" src=".github/m_subscribed.png" width="100">
+  <img alt="Mobile Profile" src=".github/m_profile.png" width="100">
+</p>
 ---
 
-## Tecnologias
+## Technologies
 
-Principais tecnologias utilizadas no desenvolvimento
-
-##### _Obs:_ Foi utilizado o editor [Visual Studio Code](https://code.visualstudio.com/) durante todo o desenvolvimento
-
-### Back-end
+### Backend
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
@@ -22,7 +45,7 @@ Principais tecnologias utilizadas no desenvolvimento
 - [Redis](https://redis.io/)
 - [Nodemailer](https://nodemailer.com/about/)
 
-### Front-end
+### Frontend
 
 - [ReactJS](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
@@ -38,79 +61,73 @@ Principais tecnologias utilizadas no desenvolvimento
 - [Redux-Saga](https://redux-saga.js.org/)
 - [Reactotron](https://infinite.red/reactotron)
 
-## Rodando o projeto
+## Run
 
-Para que toda a aplicação funcione corretamente é recomendado que as seguintes ferramentas estejam instaladas ao menos nas seguintes versões:
+For the entire application to work correctly it is recommended that the following tools are installed at least in versions:
 
 - Git -> 2.17.1
 - NodeJS -> 10.16.3
 - Yarn -> 1.19.1
 - Docker -> 19.03.4
 
-Após clonar o repositório siga os seguintes passos de cada aplicação:
-
-### Back-end
+### Backend
 
 ```bash
-# Configurando o docker do PostgreSQL
+# PostgreSQL docker
 $ docker run --name database -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=meetapp -p 5432:5432 -d postgres
 
-# Configurando o docker do Redis
+# Redis docker
 $ docker run --name redis -p 6379:6379 -d -t redis:alpine
 
-# Acessando a pasta do BE
-$ sua/pasta/destino/meetapp/meetapp_backend
+# After clone the project
+$ cd meetapp/meetapp_backend
 
-# Instalando as dependências
+# Install packages
 $ yarn install
 
-# Crie um arquivo .env na raiz no projeto contendo as configurações do Redis, PostgreSQL, etc.
-# Siga como exemplo o arquivo env.example para saber quais os dados necessários
+# Create a root .env file in the project containing the settings of Redis, PostgreSQL, etc.
+# You can follow env.example as an example
 
-# Criando as tabelas no BD
+# Creating DB tables
 $ yarn sequelize db:migrate
 
-# Rodando a aplicação em modo de desenvolvimento
+# Running in dev mode
 $ yarn dev
 ```
 
-A aplicação estará disponível em: _http://localhost:3333_
+The application will be available at: _http://localhost:3333_
 
-### Front-end
+### Frontend
 
 ```bash
-# Acessando a pasta do Front
-$ sua/pasta/destino/meetapp/meetapp_frontend
+$ cd meetapp/meetapp_frontend
 
-# Instalando as dependências
+# Install packages
 $ yarn install
 
-# Rodando a aplicação em modo de desenvolvimento
+# Running in dev mode
 $ yarn start
 ```
 
-A aplicação abrirá automaticamente no seu navegador padrão em : _http://localhost:3000_
+The application will automatically open in your default browser on: _http://localhost:3000_
 
 ### Mobile
 
-**_Obs:_** A aplicação mobile foi testada somente na plataforma Android
+_Note.: this app has not been tested on iOS device_
 
 ```bash
-# Acessando a pasta do Mobile
-$ sua/pasta/destino/meetapp/meetapp_mobile
+$ cd meetapp/meetapp_mobile
 
-# Instalando as dependências
+# Install packages
 $ yarn install
 
-# Rodando o Metro Bundler
+# Running Metro Bundler
 $ yarn start
 
-# Abra um novo terminal também acessando a pasta da aplicação
-
-# Rodando a aplicação (necessário um emulador configurado ou um device com SO Android conectado via usb)
+# and in another terminal in the project folder -> you need an Android device or emulador installed
 $ yarn android
 ```
 
 ---
 
-Desenvolvido por Danilo Sacilotto de Souza :green_heart:
+This is part of my [GoStack](https://rocketseat.com.br/bootcamp) training :green_heart:
